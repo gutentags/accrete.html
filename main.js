@@ -30,6 +30,9 @@ Main.prototype.add = function add(component, id, scope) {
     if (id === "this") {
         this.animator = scope.animator;
         window.addEventListener("keyup", this);
+        window.document.body.addEventListener("touchstart", function (event) {
+            event.preventDefault();
+        });
         window.addEventListener("swipeup", function () {
             self.swipeUp();
         });

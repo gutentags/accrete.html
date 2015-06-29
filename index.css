@@ -4,6 +4,7 @@
 
 body {
     background-color: #ccc;
+    overflow: hidden;
 }
 
 .box {
