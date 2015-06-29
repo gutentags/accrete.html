@@ -2,19 +2,11 @@
 <html>
     <head>
         <link rel="extends" href="./main">
-        <link rel="tag" href="gutentag/repeat.html">
         <link rel="tag" href="gutentag/text.html">
+        <link rel="tag" href="./board.html">
     </head>
     <body>
-        <div class="box">
-            <repeat id="grid">
-                <div id="tile" class="cell"></div>
-            </repeat>
-            <repeat id="tiles">
-                <div id="tile" class="tile">
-                    <text id="label">0</text>
-                </div>
-            </repeat>
-        </div>
+        <board id="board"></board>
+        <h2 class="score"><text id="steps">—</text><sp> steps</sp></h2>
     </body>
 </html>

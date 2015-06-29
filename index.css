@@ -7,7 +7,7 @@ body {
     overflow: hidden;
 }
 
-.box {
+.board {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -34,4 +34,12 @@ body {
     width: 80px;
     border-radius: 10px;
     z-index: 1;
+}
+
+.score {
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
 }
