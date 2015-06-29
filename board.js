@@ -11,7 +11,7 @@ function Board() {
     this.spaces = {};
     this.free = [];
     this.steps = 0;
-    this.dimensions = new Point2(5, 5);
+    this.dimensions = new Point2(3, 3);
     var point = new Point2();
     for (var y = 0; y < this.dimensions.y; y++) {
         point.y = y;
