@@ -1,5 +1,6 @@
 * {
     box-sizing: border;
+    user-select: none;
 }
 
 body {
