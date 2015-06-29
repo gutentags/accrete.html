@@ -201,6 +201,7 @@ Tile.prototype.fade = function fade() {
     this.animator.requestRedraw();
     this.animator.requestTransition();
     this.element.addEventListener("transitionend", this);
+    this.element.addEventListener("webkitTransitionEnd", this);
 };
 
 Tile.prototype.handleEvent = function handleEvent(event) {
@@ -223,9 +224,11 @@ Tile.prototype.reveal = function reveal() {
 Tile.prototype.redraw = function redraw() {
     var position = this.originalPosition.scale(110).addThis(offset);
     this.element.style.transition = 'none';
+    this.element.style.webkitTransition = 'none';
     this.element.style.top = position.y + 'px';
     this.element.style.left = position.x + 'px';
     this.element.style.transform = 'scale(' + this.originalScale + ')';
+    this.element.style.webkitTransform = 'scale(' + this.originalScale + ')';
     this.originalPosition.become(this.position);
     this.originalScale = this.scale;
 };
@@ -233,7 +236,9 @@ Tile.prototype.redraw = function redraw() {
 Tile.prototype.transition = function draw() {
     var position = this.position.scale(110).addThis(offset);
     this.element.style.transition = 'all 200ms ease';
+    this.element.style.webkitTransition = 'all 200ms ease';
     this.element.style.transform = 'scale(' + this.scale + ')';
+    this.element.style.webkitTransform = 'scale(' + this.scale + ')';
     this.element.style.top = position.y + 'px';
     this.element.style.left = position.x + 'px';
 };
