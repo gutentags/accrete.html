@@ -71,6 +71,7 @@ Board.prototype.addRandomTile = function (value) {
     var space = this.takeRandomFreeSpace();
     if (space) {
         this.addTile(space, value);
+        this.steps++;
     }
 };
 
@@ -128,7 +129,6 @@ Board.prototype.swipe = function (major, minor, start, step) {
         }
     }
     this.addRandomTile(0);
-    this.steps++;
 };
 
 Board.prototype.swipeUp = function swipeUp() {
